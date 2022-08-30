@@ -14,25 +14,27 @@ import time
 menu_selection = "0"
 menu_list = ["1", "2"]
 network_tutor_banner = pyfiglet.figlet_format("NetworkTutor")
-network_tutor_banner2 = pyfiglet.figlet_format("v 1.0", font = "small")
+network_tutor_banner2 = pyfiglet.figlet_format("v 1.0", font="small")
 banner_line = "=============================================================="
-space = [" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ",
- " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ",  " ", " ", " ", " ",  " ", " ", " ", " ",  " ", " ", " ", " ",  " ", " ", " ", " ",  " ", " ", " ", " ", ]
-menu = pyfiglet.figlet_format("Main Menu", font= "small")
+space = [" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ",
+         " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", ]
+menu = pyfiglet.figlet_format("Main Menu", font="small")
 print(banner_line)
 print(colored(network_tutor_banner, 'cyan'))
 print(colored(network_tutor_banner2, 'magenta'))
 print(banner_line)
 time.sleep(1.9)
-print(*space, sep = "\n")
+print(*space, sep="\n")
 
 # Displays menu options
+
+
 def Menu_Display():
-    print(banner_line)
     print(menu)
     print("Select one of the following options:")
     print(banner_line)
-    menu_list = ["1. OSI Fundamentals", "2. Network Tools", "3. Coming Soon", "4. Coming Soon"]
+    menu_list = ["1. OSI Fundamentals", "2. Network Tools",
+                 "3. Coming Soon", "4. Coming Soon"]
     time.sleep(.90)
     for menu_item in menu_list:
         print(colored(menu_item, 'cyan'))
