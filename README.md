@@ -3,7 +3,7 @@
 Tool to test knowledge on Networking Fundamentals
 
 This is a little project i started while both learning python and also networking fundamentals.
-END GOAL:
+<br>END GOAL:</br>
 <ol>
   <li>Train Fundamentals of Networking Concepts</li>
   <li>Test those concepts</li>
