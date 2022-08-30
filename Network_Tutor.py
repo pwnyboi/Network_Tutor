@@ -23,13 +23,15 @@ print(banner_line)
 print(colored(network_tutor_banner, 'cyan'))
 print(colored(network_tutor_banner2, 'magenta'))
 print(banner_line)
-time.sleep(1.9)
+time.sleep(1.2)
 print(*space, sep="\n")
 
 # Displays menu options
 
 
 def Menu_Display():
+    print(*space, sep="\n")
+    print(banner_line)
     print(menu)
     print("Select one of the following options:")
     print(banner_line)
@@ -38,9 +40,9 @@ def Menu_Display():
     time.sleep(.90)
     for menu_item in menu_list:
         print(colored(menu_item, 'cyan'))
+        time.sleep(.09)
     print(colored("EXIT", "red"))
-
-    time.sleep(.69)
+    time.sleep(.1)
 
 
 # Input for user to select from menu
@@ -49,13 +51,22 @@ def Menu_Select():
     if Menu_Select == "1":
         time.sleep(.69)
         print("you have selected 1")
+        print(*space, sep="\n")
+        Menu_Select = "0"
+        return Menu_Select
+
     if Menu_Select == "2":
         time.sleep(.69)
         print("you have selected 2")
+        print(*space, sep="\n")
+        Menu_Select = "0"
+        return Menu_Select
     if Menu_Select == "exit" or "EXIT":
         time.sleep(.69)
         quit()
 
 
-Menu_Display()
-Menu_Select()
+while True:
+    Menu_Display()
+    Menu_Select()
+    continue
