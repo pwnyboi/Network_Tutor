@@ -11,6 +11,7 @@ from termcolor import colored, cprint
 import time
 from OSI_Fundamentals import *
 import random
+import os
 
 
 
@@ -27,11 +28,12 @@ print(colored(network_tutor_banner, 'cyan'))
 print(colored(network_tutor_banner2, 'magenta'))
 print(banner_line)
 time.sleep(.75)
-print(*space, sep="\n")
+os.system('cls')
+
 
 # Displays menu options
 def Menu_Display():
-    print(*space, sep="\n")
+    os.system('cls')
     print(banner_line)
     print(menu)
     print("Select one of the following options:")
@@ -52,14 +54,16 @@ def Menu_Select():
     if Menu_Select == "1":
         time.sleep(.69)
         print("you have selected OSI Fundamentals!")
-        print(*space, sep="\n")
+        time.sleep(.5)
+        os.system('cls')
         osi_fundamentals_module()
         Menu_Select = "0"
         return Menu_Select
     if Menu_Select == "2":
         time.sleep(.69)
         print("you have selected 2")
-        print(*space, sep="\n")
+        time.sleep(.5)
+        os.system('cls')
         Menu_Select = "0"
         return Menu_Select
     if Menu_Select == "exit" or "EXIT":

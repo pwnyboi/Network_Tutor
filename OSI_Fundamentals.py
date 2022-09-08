@@ -8,12 +8,15 @@ from pyfiglet import Figlet
 from termcolor import colored, cprint
 import time
 import random
+import os
 
 osi_fundamentals_menu = " "
 osi_fundamentals_selection = " "
 osi_fundamentals_continue = True
 osi_correct = 0
 osi_incorrect = 0
+
+osi_fundamentals_banner = pyfiglet.figlet_format("OSI Fundamentals")
 
 def start():
     print("Welcome to OSI Fundamentals Module!")
@@ -23,14 +26,17 @@ def start():
     print("3. Exit")
     osi_fundamentals_selection = input("Selection: ")
     if osi_fundamentals_selection == "1":
+        os.system('cls')
         print("Taking TEST!")
         time.sleep(1)
         quiz()
         osi_fundamentals_selection == " "
     elif osi_fundamentals_selection == "3":
+        os.system('cls')
         print("You selected Exit.")
         stop()
     else:
+        os.system('cls')
         print("not a valid option at the moment")
         stop()
     return
@@ -42,6 +48,7 @@ def quiz():
     osi_incorrect = 0
     print("test")
     question1()
+    os.system('cls')
     review()
 
 
@@ -251,9 +258,9 @@ def review():
     time.sleep(2)
     print(f'you got {osi_incorrect} answers incorrect')
     time.sleep(2)
-    print("Remember to practice as muchb as you can!")
+    print("Remember to practice as much as you can!")
     time.sleep(3)
-    restart_quiz = input("Would you like to restart quiz? Y/N")
+    restart_quiz = input("Would you like to restart quiz? Y/N:   ")
     if restart_quiz == "y":
         quiz()
     else:
@@ -262,5 +269,6 @@ def review():
 
 
 def osi_fundamentals_module():
+    print(osi_fundamentals_banner)
     start()
 
