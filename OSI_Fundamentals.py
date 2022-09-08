@@ -14,17 +14,15 @@ osi_fundamentals_continue = True
 
 
 def start():
-    print("Welcome to OSI")
+    print("Welcome to OSI Fundamentals Module!")
     print("Please Select from the following:")
     print("1. Take OSI Fundamentals Quiz")
-    print("2. Help")
+    print("2. Get Help")
     print("3. Exit")
     osi_fundamentals_selection = input("Selection: ")
     if osi_fundamentals_selection == "1":
         print("Taking TEST!")
         osi_fundamentals_selection == " "
-        osi_fundamentals_continue = False
-        return osi_fundamentals_continue
     elif osi_fundamentals_selection == "3":
         print("You selected Exit.")
         stop()
@@ -35,8 +33,8 @@ def start():
 
 def stop():
     print("Exiting Module....")
-    time.sleep(1)
-    osi_fundamentals_selection = "Module Ended"
+    time.sleep(2)
+
 
 
 q1 = "d"
