@@ -10,6 +10,7 @@ from pyfiglet import Figlet
 from termcolor import colored, cprint
 import time
 from OSI_Fundamentals import *
+import random
 
 menu_selection = "0"
 menu_list = ["1", "2"]
@@ -35,7 +36,7 @@ def Menu_Display():
     print(banner_line)
     menu_list = ["1. OSI Fundamentals", "2. Network Tools",
                  "3. Coming Soon", "4. Coming Soon"]
-    time.sleep(.90)
+    time.sleep(.1)
     for menu_item in menu_list:
         print(colored(menu_item, 'cyan'))
         time.sleep(.09)

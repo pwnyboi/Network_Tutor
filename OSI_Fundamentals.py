@@ -7,11 +7,13 @@ import termcolor
 from pyfiglet import Figlet
 from termcolor import colored, cprint
 import time
+import random
 
 osi_fundamentals_menu = " "
 osi_fundamentals_selection = " "
 osi_fundamentals_continue = True
-
+osi_correct = 0
+osi_incorrect = 0
 
 def start():
     print("Welcome to OSI Fundamentals Module!")
@@ -22,6 +24,8 @@ def start():
     osi_fundamentals_selection = input("Selection: ")
     if osi_fundamentals_selection == "1":
         print("Taking TEST!")
+        time.sleep(1)
+        quiz()
         osi_fundamentals_selection == " "
     elif osi_fundamentals_selection == "3":
         print("You selected Exit.")
@@ -29,6 +33,12 @@ def start():
     else:
         print("not a valid option at the moment")
         stop()
+    return
+
+def quiz():
+    print("test")
+    question1()
+    review()
 
 
 def stop():
@@ -36,27 +46,26 @@ def stop():
     time.sleep(2)
 
 
-
-q1 = "d"
-q2 = "1"
-q3 = "1"
-q4 = "1"
-q5 = "1"
-q6 = "1"
-q7 = "1"
-q8 = "1"
-q9 = "1"
-q10 = "1"
-q11 = "1"
-q12 = "1"
-q13 = "1"
-q14 = "1"
-q15 = "1"
-q16 = "1"
-q17 = "1"
-q18 = "1"
-q19 = "1"
-q20 = "1"
+q1 = "a"
+q2 = "a"
+q3 = "a"
+q4 = "a"
+q5 = "a"
+q6 = "a"
+q7 = "a"
+q8 = "a"
+q9 = "a"
+q10 = "a"
+q11 = "a"
+q12 = "a"
+q13 = "a"
+q14 = "a"
+q15 = "a"
+q16 = "a"
+q17 = "a"
+q18 = "a"
+q19 = "a"
+q20 = "a"
 
 
 def question1():
@@ -65,6 +74,13 @@ def question1():
     print("B. ")
     print("C. ")
     print("D. ")
+    q1_user_answer = input("Answer: ")
+    if q1_user_answer == q1:
+        print("congrats! your right")
+        time.sleep(2)
+    else:
+        print("Wrong Answer! Study Harder!")
+        time.sleep(2)
 
 
 def question2():
@@ -219,5 +235,21 @@ def question20():
     print("D. ")
 
 
+def review():
+    print(f'you got {osi_correct} answers correct')
+    time.sleep(2)
+    print(f'you got {osi_incorrect} answers incorrect')
+    time.sleep(2)
+    print("Remember to practice as muchb as you can!")
+    time.sleep(3)
+    restart_quiz = input("Would you like to restart quiz? Y/N")
+    if restart_quiz == "y":
+        quiz()
+    else:
+        print("Have a nice day!")
+        time.sleep(.75)
+
+
 def osi_fundamentals_module():
     start()
+
