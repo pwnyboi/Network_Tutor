@@ -36,6 +36,10 @@ def start():
     return
 
 def quiz():
+    global osi_incorrect
+    global osi_correct
+    osi_correct = 0
+    osi_incorrect = 0
     print("test")
     question1()
     review()
@@ -77,10 +81,17 @@ def question1():
     q1_user_answer = input("Answer: ")
     if q1_user_answer == q1:
         print("congrats! your right")
+        global osi_correct
+        osi_correct+=1
         time.sleep(2)
+        return osi_correct
+
     else:
         print("Wrong Answer! Study Harder!")
+        global osi_incorrect
+        osi_incorrect+=1
         time.sleep(2)
+        return osi_incorrect
 
 
 def question2():

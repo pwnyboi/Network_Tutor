@@ -12,6 +12,8 @@ import time
 from OSI_Fundamentals import *
 import random
 
+
+
 menu_selection = "0"
 menu_list = ["1", "2"]
 network_tutor_banner = pyfiglet.figlet_format("NetworkTutor")
