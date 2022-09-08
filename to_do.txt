@@ -1,0 +1,7 @@
+
+
+
+
+need to make clear function compatible with all os
+https://www.geeksforgeeks.org/clear-screen-python/
+
