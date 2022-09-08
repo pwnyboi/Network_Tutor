@@ -9,7 +9,7 @@ import termcolor
 from pyfiglet import Figlet
 from termcolor import colored, cprint
 import time
-
+from OSI_Fundamentals import *
 
 menu_selection = "0"
 menu_list = ["1", "2"]
@@ -23,12 +23,10 @@ print(banner_line)
 print(colored(network_tutor_banner, 'cyan'))
 print(colored(network_tutor_banner2, 'magenta'))
 print(banner_line)
-time.sleep(1.2)
+time.sleep(.75)
 print(*space, sep="\n")
 
 # Displays menu options
-
-
 def Menu_Display():
     print(*space, sep="\n")
     print(banner_line)
@@ -50,11 +48,11 @@ def Menu_Select():
     Menu_Select = input("Select Item: ")
     if Menu_Select == "1":
         time.sleep(.69)
-        print("you have selected 1")
+        print("you have selected OSI Fundamentals!")
         print(*space, sep="\n")
+        osi_fundamentals_module()
         Menu_Select = "0"
         return Menu_Select
-
     if Menu_Select == "2":
         time.sleep(.69)
         print("you have selected 2")
