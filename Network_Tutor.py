@@ -38,8 +38,8 @@ def Menu_Display():
     print(menu)
     print("Select one of the following options:")
     print(banner_line)
-    menu_list = ["1. OSI Fundamentals", "2. Network Tools",
-                 "3. Coming Soon", "4. Coming Soon"]
+    menu_list = ["1. OSI Fundamentals", "2. Network Tools (Coming Soon!)",
+                 "3. Coming Soon (Coming Soon!)", "4. Coming Soon (Coming Soon!)"]
     time.sleep(.1)
     for menu_item in menu_list:
         print(colored(menu_item, 'cyan'))

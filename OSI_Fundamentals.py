@@ -80,8 +80,8 @@ q20 = "a"
 
 
 def question1():
-    print("Question : ")
-    print("A. ")
+    print("Question : Which answer is correct")
+    print("A. correct answer")
     print("B. ")
     print("C. ")
     print("D. ")
